@@ -28,7 +28,6 @@ html, body {
 }
 
 #main {
-    /* background-color: #000; */
     position: relative;
     z-index: 10;
 }
@@ -108,7 +107,6 @@ nav h3 {
 #center {
     height: 65vh;
     width: 100%;
-    /* background-color: orange; */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -155,7 +153,6 @@ nav h3 {
 
 #hero-2 {
     background: linear-gradient(#3C5B6F, #3C5B6F);
-
     height: 30vw;
     width: 30vw;
     border-radius: 50%;
@@ -186,7 +183,6 @@ nav h3 {
     from {
         transform: translate(55%, -3%);
     }
-
     to {
         transform: translate(0%, 10%);
     }
@@ -196,7 +192,6 @@ nav h3 {
     from {
         transform: translate(5%, -5%);
     }
-
     to {
         transform: translate(-20%, 30%);
     }
@@ -230,7 +225,6 @@ nav h3 {
 
 #moving-text h1 {
     font-size: 9vw;
-    /* background-color: lightblue; */
     display: inline-block;
 }
 
@@ -247,7 +241,6 @@ nav h3 {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-100%);
     }
@@ -256,7 +249,6 @@ nav h3 {
 #page2-bottom {
     height: 80vh;
     width: 100%;
-    /* background-color: aliceblue; */
     padding: 4.5vw;
     display: flex;
     align-items: center;
@@ -273,7 +265,6 @@ nav h3 {
 
 #bottom-part2 {
     width: 20%;
-    /* background-color: aqua; */
 }
 
 #bottom-part2 img {
@@ -293,8 +284,6 @@ nav h3 {
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(to top right, #3C5B6F, #3C5B6F);
-
-
     top: 58%;
     left: 25%;
     filter: blur(20px);
@@ -303,7 +292,6 @@ nav h3 {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-
 }
 
 @keyframes gooey {
@@ -311,15 +299,11 @@ nav h3 {
         filter: blur(20px);
         transform: translate(10%, -10%) skew(0);
     }
-
     to {
         filter: blur(30px);
         transform: translate(-10%, 10%) skew(-12deg);
     }
 }
-
-
-
 
 #page3 {
     min-height: 100vh;
@@ -332,7 +316,6 @@ nav h3 {
     height: 150px;
     width: 100%;
     position: relative;
-
     border-bottom: 1px solid #38383864;
     overflow: hidden;
     display: flex;
@@ -360,12 +343,9 @@ nav h3 {
     top: 0;
 }
 
-
-
 #fixed-image {
     height: 30vw;
     width: 24vw;
-    /* background-color: red; */
     border-radius: 15px;
     position: fixed;
     z-index: 99;
@@ -377,27 +357,28 @@ nav h3 {
 }
 
 #page4 {
-    height: 70vh;
     width: 100%;
-    background-color: #EFEAE3;
-    padding: 10vw 2vw;
+    overflow: hidden;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.swiper-slide {
-    width: 30%;
-    border-left: 1px solid #aeadad;
-    padding: 0 2vw;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
 }
 
 #page5 {
     height: 100vh;
     width: 100%;
-    /* background-color: #EFEAE3; */
 }
 
 #footer {
@@ -409,7 +390,6 @@ nav h3 {
     z-index: 9;
     bottom: 0;
     display: flex;
-    /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
     padding: 1vw 3vw;
@@ -418,7 +398,6 @@ nav h3 {
 #footer h1 {
     font-size: 20.5vw;
 }
-
 
 #footer-bottom {
     border-top: 1px solid #dadada;
@@ -429,7 +408,7 @@ nav h3 {
 #full-scr {
     height: 100vh;
     width: 100%;
-    background-color: #00000070;
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     z-index: 99;
     top: -100%;
@@ -442,21 +421,18 @@ nav h3 {
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
 }
 
-@media (max-width:600px) {
-
+@media (max-width: 600px) {
     #page1 {
         min-height: 100vh;
         width: 100vw;
-        padding: 0 0vw;
+        padding: 0;
     }
 
     nav {
         padding: 8vw 5vw;
         background-color: #EFEAE3;
-        /* padding: 0 5vw; */
     }
 
     nav img {
@@ -480,8 +456,6 @@ nav h3 {
 
     #center {
         height: 62vh;
-        width: 100%;
-        /* background-color: orange; */
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -544,7 +518,6 @@ nav h3 {
 
     #moving-text h1 {
         font-size: 15vw;
-        /* background-color: lightblue; */
         display: inline-block;
     }
 
@@ -553,14 +526,13 @@ nav h3 {
         width: 25px;
         border-radius: 50%;
         display: inline-block;
-        background-color: #3C5B6F`;
+        background-color: #3C5B6F;
         margin: 2vw 2vw;
     }
 
     #page2-bottom {
         height: 90vh;
         width: 100%;
-        /* background-color: aliceblue; */
         padding: 10vw 4vw;
         display: flex;
         align-items: flex-start;
@@ -578,7 +550,6 @@ nav h3 {
 
     #bottom-part2 {
         width: 70%;
-        /* background-color: aqua; */
     }
 
     #bottom-part2 img {
@@ -597,10 +568,7 @@ nav h3 {
         width: 62vw;
         position: absolute;
         border-radius: 50%;
-        background: linear-gradient(to top right,  #3C5B6F, #3C5B6F);
-        /* background: linear-gradient(to top right,red,blue); */
-
-
+        background: linear-gradient(to top right, #3C5B6F, #3C5B6F);
         top: 58%;
         left: 25%;
         filter: blur(20px);
@@ -609,13 +577,10 @@ nav h3 {
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
-
     }
-
-
 }
 
-#loader{
+#loader {
     height: 100%;
     width: 100%;
     background-color: #000;
@@ -628,10 +593,10 @@ nav h3 {
     justify-content: center;
 }
 
-#loader h1{
+#loader h1 {
     font-size: 4vw;
     color: transparent;
-    background: linear-gradient(to right,#3C5B6F,white);
+    background: linear-gradient(to right, #3C5B6F, white);
     -webkit-background-clip: text;
     position: absolute;
     opacity: 0;
@@ -640,31 +605,30 @@ nav h3 {
     animation-delay: 1s;
     animation-timing-function: linear;
 }
-#loader h1:nth-child(2){
+#loader h1:nth-child(2) {
     animation-delay: 2s;
 }
-#loader h1:nth-child(3){
+#loader h1:nth-child(3) {
     animation-delay: 3s;
 }
 
 @keyframes load {
-    0%{
+    0% {
         opacity: 0;
     }
-    10%{
+    10% {
         opacity: 1;
     }
-    90%{
+    90% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
 
-@media (max-width:600px) {
-    #loader h1{
+@media (max-width: 600px) {
+    #loader h1 {
         font-size: 9vw;
-      
     }
 }
